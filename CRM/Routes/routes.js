@@ -12,3 +12,4 @@ router.get('/isLoggedIn', commoncontroller.isLoggedIn);
 
 router.post('/register', commoncontroller.register)
  
+module.exports = router
