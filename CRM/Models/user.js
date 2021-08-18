@@ -4,19 +4,16 @@ const UserDetails = mongoose.Schema (
     {
         username: {
             type: String,
-            required: true
         },
         password: {
             type: String,
-            required: true,
         },
-        Task: {
+        task: {
             type: Boolean,
-            required: true,
         }
     }
 )
 
-const User = mongoose.model('Users', UserDetails)
+const User = mongoose.model('User', UserDetails)
 
 module.exports = User

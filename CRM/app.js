@@ -7,7 +7,9 @@ const express = require('express'),
       User = require('./models/user');
       express_session = require('express-session')
 const { authenticate } = require('passport');
+const connectDB = require('./Config/dbConfig');
 const Router = require('./Routes/routes')
+require('dotenv').config()
 
 
 const app = express();
@@ -37,5 +39,6 @@ app.use('/',Router)
 // passport.deserializeUser(User.deserializeUser());
 
 app.listen(3000, () => {
+    connectDB()
     console.log("server has been started on port 3000")
 })
